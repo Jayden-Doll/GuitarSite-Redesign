@@ -9,14 +9,16 @@
     <title>Guitar App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="box lowE">lowE<audio src="sounds/lowE.wav"></audio></div>
-      <div class="box A">A<audio src="sounds/A.wav"></audio></div>
-      <div class="box D">D<audio src="sounds/D.wav"></audio></div>
-      <div class="box G">G<audio src="sounds/G.wav"></audio></div>
-      <div class="box B">B<audio src="sounds/lowB.wav"></audio></div>
-      <div class="box highE">highE<audio src="sounds/highE.wav"></audio></div>
+    <div>
+      <audio id="lowE" type="audio/wav" src="sounds/lowE.wav"></audio>
+      <audio id="A" type="audio/wav" src="sounds/A.wav"></audio>
+      <audio id="D" type="audio/wav" src="sounds/D.wav"></audio>
+      <audio id="G" type="audio/wav" src="sounds/G.wav"></audio>
+      <audio id="B" type="audio/ogg" src="sounds/B.ogg"></audio>
+      <audio id="highE" type="audio/wav" src="sounds/highE.wav"></audio>
     </div>
+
+    <div class="container"></div>
     <!--Main Script-->
     <script src="scripts/app.js"></script>
   </body>

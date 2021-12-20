@@ -1,25 +1,32 @@
+$primary-color: #aa1e23;
+
 body {
   font-size: 62.5%;
   margin: 0;
 
   .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
-    width: 100%;
+    width: 99.7%;
     height: 100vh;
-    border: 2px solid red;
+    border: 2px solid $primary-color;
 
     .box {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
+      color: #fff;
       font-size: 2rem;
       width: 100px;
       height: 100px;
-      background-color: red;
+      background-color: $primary-color;
+    }
+
+    .box:hover {
+      transform: scale(105%);
     }
   }
 }
