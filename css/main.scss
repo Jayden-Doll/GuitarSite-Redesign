@@ -1,54 +1,270 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
+// Variables
 $primary-color: #aa1e23;
+$primary-color-light: #c63c41;
+$primary-color-dark: #8c272b;
+$secondary-color: #333;
 
-body {
-  font-size: 62.5%;
+//Typography Mixins
+@mixin ff-raleway {
+  font-family: "Raleway", "sans-serif";
+}
+@mixin ff-sourcesans {
+  font-family: "Source Sans Pro", "sans-serif";
+}
+
+//CSS RESET!
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
+  padding: 0;
+}
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+html {
+  font-size: 62.5%;
+}
 
-    width: 50%;
-    height: 100vh;
-    border: 4px solid $primary-color;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
 
-    .selector {
-      display: flex;
-      flex-direction: row;
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+//END OF CSS RESET
+
+//Landing Page Styles
+.hero--section-wrapper {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+}
+
+//Hero Section Left
+.hero--section-left {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+
+  padding-left: 20rem;
+  padding-top: 3rem;
+}
+
+//Hero Nav
+.nav--list {
+  @include ff-raleway();
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+  min-width: 70rem;
+
+  margin-bottom: 4.5rem;
+
+  .nav--list-item {
+    border-bottom: 2px solid transparent;
+
+    font-size: 2rem;
+
+    min-width: 2rem;
+
+    transition: border-bottom 0.15s;
+
+    .link {
+      color: $secondary-color;
+      padding: 1rem 0.75rem;
     }
 
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 2rem;
-      font-family: "Source Sans Pro";
-      font-weight: 600;
-      width: 100px;
-      height: 100px;
-      background-color: $primary-color;
-    }
-
-    .box2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 2rem;
-      font-family: "Source Sans Pro";
-      font-weight: 600;
-      width: 100px;
-      height: 100px;
-      background-color: $primary-color;
-    }
-
-    .box:hover {
-      transform: scale(105%);
+    .logo--link {
+      color: #000;
+      font-size: 3rem;
+      font-weight: bolder;
     }
   }
+
+  .nav--list-item:hover {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  .logo:hover {
+    border-bottom: 2px solid transparent;
+  }
+}
+
+//Hero Left Content
+.hero--content-container {
+  @include ff-raleway();
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: auto;
+
+  width: 50%;
+  max-width: 50%;
+
+  .hero--content-title {
+    font-size: 6rem;
+    font-weight: bolder;
+    line-height: 6rem;
+
+    width: 70%;
+    min-width: 45rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .hero--content-subtitle {
+    font-size: 3rem;
+    font-weight: 500;
+
+    min-width: 35rem;
+
+    margin-bottom: 2rem;
+
+    .subtitle--decoration {
+      color: $primary-color;
+
+      font-weight: bolder;
+      font-size: 3.1rem;
+
+      padding-left: 0.35rem;
+    }
+  }
+
+  .hero--content-description {
+    font-size: 2rem;
+
+    min-width: 45rem;
+
+    margin-bottom: 3rem;
+  }
+
+  .btn--hero {
+    background-color: $primary-color-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 17rem;
+    height: 7rem;
+    border-radius: 8px;
+
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+
+    transition: background-color 0.15s;
+  }
+
+  .btn--hero:hover {
+    background-color: $primary-color;
+  }
+}
+
+//Hero Section Right
+.hero--section-right {
+  display: flex;
+  justify-content: flex-start;
+
+  width: 30%;
+  min-width: 30%;
+
+  .image--guitar {
+    transform: scale(95%) translateX(-8rem);
+  }
+}
+
+.background--decoration {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+
+  background-color: $primary-color;
+
+  width: 100vw;
+  height: 15%;
+}
+
+.image--triangle {
+  position: absolute;
+  bottom: 15%;
+  z-index: -1;
+
+  width: 100vw;
 }

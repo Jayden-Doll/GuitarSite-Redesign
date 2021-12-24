@@ -1,10 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Source+Sans+Pro:wght@300;400;600&display=swap");
-body {
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
   font-size: 62.5%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.hero--section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 
-body .container {
+.hero--section-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,27 +103,99 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
-  height: 100vh;
-  border: 4px solid #aa1e23;
+  width: 70%;
+  padding-left: 20rem;
+  padding-top: 3rem;
 }
 
-body .container .selector {
+.nav--list {
+  font-family: "Raleway", "sans-serif";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  min-width: 70rem;
+  margin-bottom: 4.5rem;
+}
+
+.nav--list .nav--list-item {
+  border-bottom: 2px solid transparent;
+  font-size: 2rem;
+  min-width: 2rem;
+  -webkit-transition: border-bottom 0.15s;
+  transition: border-bottom 0.15s;
+}
+
+.nav--list .nav--list-item .link {
+  color: #333;
+  padding: 1rem 0.75rem;
+}
+
+.nav--list .nav--list-item .logo--link {
+  color: #000;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.nav--list .nav--list-item:hover {
+  border-bottom: 2px solid #aa1e23;
+}
+
+.nav--list .logo:hover {
+  border-bottom: 2px solid transparent;
+}
+
+.hero--content-container {
+  font-family: "Raleway", "sans-serif";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: auto;
+  width: 50%;
+  max-width: 50%;
 }
 
-body .container .box {
+.hero--content-container .hero--content-title {
+  font-size: 6rem;
+  font-weight: bolder;
+  line-height: 6rem;
+  width: 70%;
+  min-width: 45rem;
+  margin-bottom: 2rem;
+}
+
+.hero--content-container .hero--content-subtitle {
+  font-size: 3rem;
+  font-weight: 500;
+  min-width: 35rem;
+  margin-bottom: 2rem;
+}
+
+.hero--content-container .hero--content-subtitle .subtitle--decoration {
+  color: #aa1e23;
+  font-weight: bolder;
+  font-size: 3.1rem;
+  padding-left: 0.35rem;
+}
+
+.hero--content-container .hero--content-description {
+  font-size: 2rem;
+  min-width: 45rem;
+  margin-bottom: 3rem;
+}
+
+.hero--content-container .btn--hero {
+  background-color: #8c272b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,36 +205,50 @@ body .container .box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
-  font-size: 2rem;
-  font-family: "Source Sans Pro";
+  width: 17rem;
+  height: 7rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 2.2rem;
   font-weight: 600;
-  width: 100px;
-  height: 100px;
+  color: #fff;
+  -webkit-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+
+.hero--content-container .btn--hero:hover {
   background-color: #aa1e23;
 }
 
-body .container .box2 {
+.hero--section-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  font-size: 2rem;
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-  width: 100px;
-  height: 100px;
-  background-color: #aa1e23;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 30%;
+  min-width: 30%;
 }
 
-body .container .box:hover {
-  -webkit-transform: scale(105%);
-          transform: scale(105%);
+.hero--section-right .image--guitar {
+  -webkit-transform: scale(95%) translateX(-8rem);
+          transform: scale(95%) translateX(-8rem);
+}
+
+.background--decoration {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  background-color: #aa1e23;
+  width: 100vw;
+  height: 15%;
+}
+
+.image--triangle {
+  position: absolute;
+  bottom: 15%;
+  z-index: -1;
+  width: 100vw;
 }
 /*# sourceMappingURL=main.css.map */

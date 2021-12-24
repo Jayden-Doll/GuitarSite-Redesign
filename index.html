@@ -9,24 +9,100 @@
     <title>Guitar App</title>
   </head>
   <body>
-    <div>
-      <audio id="E" type="audio/wav" src="sounds/lowE.wav"></audio>
-      <audio id="A" type="audio/wav" src="sounds/A.wav"></audio>
-      <audio id="D" type="audio/wav" src="sounds/D.wav"></audio>
-      <audio id="G" type="audio/wav" src="sounds/G.wav"></audio>
-      <audio id="B" type="audio/ogg" src="sounds/B.ogg"></audio>
-      <audio id="e" type="audio/wav" src="sounds/highE.wav"></audio>
-
-      <audio id="E" type="audio/wav" src="./sounds/woo.wav"></audio>
-      <audio id="C" type="audio/wav" src="./sounds/woo.wav"></audio>
-      <audio id="CC" type="audio/wav" src="./sounds/woo.wav"></audio>
-      <audio id="EE" type="audio/wav" src="./sounds/woo.wav"></audio>
+    <!-- Audio Files -->
+    <div class="audio--files">
+      <audio
+        preload
+        id="MutedE"
+        type="audio/mp3"
+        src="sounds/MutedE.mp3"
+      ></audio>
+      <audio preload id="E" type="audio/mp3" src="sounds/E.mp3"></audio>
+      <audio preload id="A" type="audio/mp3" src="sounds/A.mp3"></audio>
+      <audio preload id="D" type="audio/mp3" src="sounds/D.mp3"></audio>
+      <audio preload id="G" type="audio/mp3" src="sounds/G.mp3"></audio>
+      <audio preload id="B" type="audio/mp3" src="sounds/B.mp3"></audio>
+      <audio preload id="e" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="C3" type="audio/mp3" src="sounds/C3.mp3"></audio>
+      <audio preload id="E2" type="audio/mp3" src="sounds/E2.mp3"></audio>
+      <audio preload id="C1" type="audio/mp3" src="sounds/C1.mp3"></audio>
+      <audio preload id="G3" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="B2" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="D3" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="g3" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="A2" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="ff2" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="CC2" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="GG1" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="F1" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="f1" type="audio/mp3" src="sounds/highE.mp3"></audio>
+      <audio preload id="F3" type="audio/mp3" src="sounds/highE.mp3"></audio>
     </div>
 
-    <button class="btn-default">Default</button>
+    <!-- Hero Section -->
+
+    <section class="hero--section-wrapper">
+      <div class="hero--section-left">
+        <header>
+          <nav class="nav--container">
+            <ul class="nav--list">
+              <li id="logo" class="nav--list-item logo">
+                <a class="logo--link" href="/">GS</a>
+              </li>
+              <li class="nav--list-item">
+                <a class="link" href="#Features">Features</a>
+              </li>
+              <li class="nav--list-item">
+                <a class="link" href="#Review">Review</a>
+              </li>
+              <li class="nav--list-item">
+                <a class="link" href="#Sound_Test">Sound Test</a>
+              </li>
+              <li class="nav--list-item">
+                <a class="link" href="#Specifications">Specifications</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="hero--content-container">
+          <h1 class="hero--content-title">Taylor GS Mini Mahogany</h1>
+          <h2 class="hero--content-subtitle">
+            Small guitar, <span class="subtitle--decoration">big sound.</span>
+          </h2>
+          <p class="hero--content-description">
+            With it's solid mahogany top and layered sapele back and sides, the
+            GS Mini delivers a warm and mid-range focused sound.
+          </p>
+          <a class="btn btn--hero" href="#">order now</a>
+        </div>
+      </div>
+      <div class="hero--section-right">
+        <img
+          class="image--guitar"
+          src="imgs/GSMINI.png"
+          alt="Taylor GS Mini Mahogany"
+        />
+      </div>
+      <img
+        class="image--triangle"
+        src="imgs/triangleshape.png"
+        alt="Red Triangle Shape"
+      />
+      <div class="background--decoration"></div>
+    </section>
+    <main></main>
+
+    <!--End of Hero Section -->
+
+    <!-- <button class="btn-default">Standard Tuning</button>
     <button class="btn-c">C Chord</button>
-    <div class="container"></div>
+    <button class="btn-g">G Chord</button>
+    <button class="btn-d">D Chord</button>
+    <button class="btn-a">A Chord</button>
+    <button class="btn-e">E Chord</button>
+    <button class="btn-f">F Chord</button>
+    <div class="container--sound-list"></div> -->
     <!--Main Script-->
-    <script src="scripts/app.js"></script>
+    <!-- <script src="scripts/app.js"></script> -->
   </body>
 </html>
