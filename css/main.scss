@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
-// Variables
-$primary-color: #aa1e23;
-$primary-color-light: #c63c41;
-$primary-color-dark: #8c272b;
-$secondary-color: #333;
-
-//Typography Mixins
-@mixin ff-raleway {
-  font-family: "Raleway", "sans-serif";
-}
-@mixin ff-sourcesans {
-  font-family: "Source Sans Pro", "sans-serif";
-}
-
 //CSS RESET!
 /* Box sizing rules */
 *,
@@ -69,12 +55,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -100,171 +80,178 @@ select {
 }
 //END OF CSS RESET
 
-//Landing Page Styles
-.hero--section-wrapper {
-  display: flex;
+// Variables //
+$primary-color: #aa1e23;
+$primary-color-light: #c63c41;
+$primary-color-dark: #8c272b;
+$secondary-color: #333;
 
-  width: 100vw;
+//Typography Mixins
+@mixin ff-raleway {
+  font-family: "Raleway", "sans-serif";
+}
+@mixin ff-sourcesans {
+  font-family: "Source Sans Pro", "sans-serif";
+}
+
+@mixin border-test {
+  // border: 2px solid red;
+}
+
+//START OF HERO SECTION
+
+.hero--section-wrapper {
+  @include ff-raleway();
+  @include border-test();
+  width: 100%;
+
   height: 100vh;
 
-  margin: 0;
-}
-
-//Hero Section Left
-.hero--section-left {
   display: flex;
   flex-direction: column;
 
-  width: 70%;
+  padding: 5em 14em;
 
-  padding-left: 20rem;
-  padding-top: 3rem;
-}
-
-//Hero Nav
-.nav--list {
-  @include ff-raleway();
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 80%;
-  min-width: 70rem;
-
-  margin-bottom: 4.5rem;
-
-  .nav--list-item {
-    border-bottom: 2px solid transparent;
-
-    font-size: 2rem;
-
-    min-width: 2rem;
-
-    transition: border-bottom 0.15s;
-
-    .link {
-      color: $secondary-color;
-      padding: 1rem 0.75rem;
-    }
-
-    .logo--link {
-      color: #000;
-      font-size: 3rem;
-      font-weight: bolder;
-    }
-  }
-
-  .nav--list-item:hover {
-    border-bottom: 2px solid $primary-color;
-  }
-
-  .logo:hover {
-    border-bottom: 2px solid transparent;
-  }
-}
-
-//Hero Left Content
-.hero--content-container {
-  @include ff-raleway();
-
-  display: flex;
-  flex-direction: column;
-
-  max-height: auto;
-
-  width: 50%;
-  max-width: 50%;
-
-  .hero--content-title {
-    font-size: 6rem;
-    font-weight: bolder;
-    line-height: 6rem;
-
-    width: 70%;
-    min-width: 45rem;
-
-    margin-bottom: 2rem;
-  }
-
-  .hero--content-subtitle {
-    font-size: 3rem;
-    font-weight: 500;
-
-    min-width: 35rem;
-
-    margin-bottom: 2rem;
-
-    .subtitle--decoration {
-      color: $primary-color;
-
-      font-weight: bolder;
-      font-size: 3.1rem;
-
-      padding-left: 0.35rem;
-    }
-  }
-
-  .hero--content-description {
-    font-size: 2rem;
-
-    min-width: 45rem;
-
-    margin-bottom: 3rem;
-  }
-
-  .btn--hero {
-    background-color: $primary-color-dark;
+  .nav--container {
+    // border: 2px solid forestgreen;
+    width: 100%;
+    height: auto;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: 17rem;
-    height: 7rem;
-    border-radius: 8px;
+    .nav--list {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding-top: 1rem;
 
-    text-transform: uppercase;
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: #fff;
+      .nav--list-item {
+        font-size: 2rem;
 
-    transition: background-color 0.15s;
+        .nav--list-link {
+          color: $secondary-color;
+          padding: 0 1rem;
+          margin: 0 1.5rem;
+          transition: 65ms ease-in-out;
+        }
+
+        .nav--list-link:hover {
+          color: $primary-color-light;
+          border-bottom: 3px solid $primary-color-light;
+        }
+
+        .logo--link {
+          font-weight: 700;
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        .logo--link:hover {
+          color: $secondary-color;
+          border: none;
+        }
+      }
+    }
   }
 
-  .btn--hero:hover {
-    background-color: $primary-color;
-  }
-}
+  .hero--content-container {
+    // border: 2px solid darkgoldenrod;
+    display: flex;
+    padding-right: 20%;
 
-//Hero Section Right
-.hero--section-right {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 85vh;
 
-  width: 30%;
-  min-width: 30%;
+    .hero--text-container {
+      // border: 1px solid hotpink;
 
-  .image--guitar {
-    transform: scale(95%) translateX(-8rem);
+      .hero--content-title {
+        font-size: 6rem;
+        line-height: 7rem;
+        margin-top: 2.5rem;
+        padding: 1.5rem 0;
+      }
+
+      .hero--content-subtitle {
+        font-size: 3.7rem;
+        font-weight: 500;
+        color: $secondary-color;
+        padding-bottom: 1rem;
+
+        .subtitle--decoration {
+          color: $primary-color;
+          font-weight: 600;
+        }
+      }
+
+      .hero--content-description {
+        @include ff-sourcesans();
+        color: $secondary-color;
+        padding-top: 0;
+        padding-bottom: 5rem;
+        margin-top: 0;
+        font-size: 2.01rem;
+        max-width: 40ch;
+      }
+
+      .btn--hero {
+        background-color: $primary-color;
+        color: #fff;
+        width: auto;
+        padding: 2rem 3rem;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .btn--hero:hover {
+        background-color: $primary-color-dark;
+      }
+
+      .btn--hero:active {
+        background-color: $primary-color;
+      }
+    }
+
+    .guitar--container {
+      // border: 2px solid blue;
+      margin: auto;
+      padding-bottom: 1rem;
+
+      .guitar--image {
+        display: block;
+        max-width: 145%;
+        padding-left: 4rem;
+      }
+    }
   }
 }
 
 .background--decoration {
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: -1;
 
   background-color: $primary-color;
 
   width: 100vw;
-  height: 15%;
+  height: 1.5%;
 }
 
 .image--triangle {
   position: absolute;
-  bottom: 15%;
+  bottom: 1.5%;
+  left: 0;
   z-index: -1;
 
-  width: 100vw;
+  width: 100%;
 }
+
+//END OF HERO SECTION
+
+//FEATURES SECTION
+
+//END OF FEATURES SECTION

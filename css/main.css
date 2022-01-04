@@ -54,12 +54,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -87,15 +81,9 @@ select {
 }
 
 .hero--section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
+  font-family: "Raleway", "sans-serif";
+  width: 100%;
   height: 100vh;
-  margin: 0;
-}
-
-.hero--section-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,152 +91,143 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
-  padding-left: 20rem;
-  padding-top: 3rem;
+  padding: 5em 14em;
 }
 
-.nav--list {
-  font-family: "Raleway", "sans-serif";
+.hero--section-wrapper .nav--container {
+  width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+}
+
+.hero--section-wrapper .nav--container .nav--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.hero--section-wrapper .nav--container .nav--list .nav--list-item {
+  font-size: 2rem;
+}
+
+.hero--section-wrapper .nav--container .nav--list .nav--list-item .nav--list-link {
+  color: #333;
+  padding: 0 1rem;
+  margin: 0 1.5rem;
+  -webkit-transition: 65ms ease-in-out;
+  transition: 65ms ease-in-out;
+}
+
+.hero--section-wrapper .nav--container .nav--list .nav--list-item .nav--list-link:hover {
+  color: #c63c41;
+  border-bottom: 3px solid #c63c41;
+}
+
+.hero--section-wrapper .nav--container .nav--list .nav--list-item .logo--link {
+  font-weight: 700;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.hero--section-wrapper .nav--container .nav--list .nav--list-item .logo--link:hover {
+  color: #333;
+  border: none;
+}
+
+.hero--section-wrapper .hero--content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20%;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  min-width: 70rem;
-  margin-bottom: 4.5rem;
+  width: 100%;
+  height: 85vh;
 }
 
-.nav--list .nav--list-item {
-  border-bottom: 2px solid transparent;
-  font-size: 2rem;
-  min-width: 2rem;
-  -webkit-transition: border-bottom 0.15s;
-  transition: border-bottom 0.15s;
-}
-
-.nav--list .nav--list-item .link {
-  color: #333;
-  padding: 1rem 0.75rem;
-}
-
-.nav--list .nav--list-item .logo--link {
-  color: #000;
-  font-size: 3rem;
-  font-weight: bolder;
-}
-
-.nav--list .nav--list-item:hover {
-  border-bottom: 2px solid #aa1e23;
-}
-
-.nav--list .logo:hover {
-  border-bottom: 2px solid transparent;
-}
-
-.hero--content-container {
-  font-family: "Raleway", "sans-serif";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-height: auto;
-  width: 50%;
-  max-width: 50%;
-}
-
-.hero--content-container .hero--content-title {
+.hero--section-wrapper .hero--content-container .hero--text-container .hero--content-title {
   font-size: 6rem;
-  font-weight: bolder;
-  line-height: 6rem;
-  width: 70%;
-  min-width: 45rem;
-  margin-bottom: 2rem;
+  line-height: 7rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
 }
 
-.hero--content-container .hero--content-subtitle {
-  font-size: 3rem;
+.hero--section-wrapper .hero--content-container .hero--text-container .hero--content-subtitle {
+  font-size: 3.7rem;
   font-weight: 500;
-  min-width: 35rem;
-  margin-bottom: 2rem;
+  color: #333;
+  padding-bottom: 1rem;
 }
 
-.hero--content-container .hero--content-subtitle .subtitle--decoration {
+.hero--section-wrapper .hero--content-container .hero--text-container .hero--content-subtitle .subtitle--decoration {
   color: #aa1e23;
-  font-weight: bolder;
-  font-size: 3.1rem;
-  padding-left: 0.35rem;
-}
-
-.hero--content-container .hero--content-description {
-  font-size: 2rem;
-  min-width: 45rem;
-  margin-bottom: 3rem;
-}
-
-.hero--content-container .btn--hero {
-  background-color: #8c272b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 17rem;
-  height: 7rem;
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-size: 2.2rem;
   font-weight: 600;
-  color: #fff;
-  -webkit-transition: background-color 0.15s;
-  transition: background-color 0.15s;
 }
 
-.hero--content-container .btn--hero:hover {
+.hero--section-wrapper .hero--content-container .hero--text-container .hero--content-description {
+  font-family: "Source Sans Pro", "sans-serif";
+  color: #333;
+  padding-top: 0;
+  padding-bottom: 5rem;
+  margin-top: 0;
+  font-size: 2.01rem;
+  max-width: 40ch;
+}
+
+.hero--section-wrapper .hero--content-container .hero--text-container .btn--hero {
+  background-color: #aa1e23;
+  color: #fff;
+  width: auto;
+  padding: 2rem 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero--section-wrapper .hero--content-container .hero--text-container .btn--hero:hover {
+  background-color: #8c272b;
+}
+
+.hero--section-wrapper .hero--content-container .hero--text-container .btn--hero:active {
   background-color: #aa1e23;
 }
 
-.hero--section-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 30%;
-  min-width: 30%;
+.hero--section-wrapper .hero--content-container .guitar--container {
+  margin: auto;
+  padding-bottom: 1rem;
 }
 
-.hero--section-right .image--guitar {
-  -webkit-transform: scale(95%) translateX(-8rem);
-          transform: scale(95%) translateX(-8rem);
+.hero--section-wrapper .hero--content-container .guitar--container .guitar--image {
+  display: block;
+  max-width: 145%;
+  padding-left: 4rem;
 }
 
 .background--decoration {
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: -1;
   background-color: #aa1e23;
   width: 100vw;
-  height: 15%;
+  height: 1.5%;
 }
 
 .image--triangle {
   position: absolute;
-  bottom: 15%;
+  bottom: 1.5%;
+  left: 0;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
