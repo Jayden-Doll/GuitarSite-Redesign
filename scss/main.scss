@@ -208,17 +208,52 @@ html {
     height: auto;
   }
 
-  .image-container-gig {
+  .image--container-gig {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .gigbag--image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      object-fit: contain;
+    }
+=======
+    background-image: url("../imgs/GSMINIgigbag.png");
+=======
+    background-image: url("/imgs/GSMINIgigbag.png");
+>>>>>>> 1de4b91 (Test Image File Path)
+=======
+    background-image: url("/imgs/gigbag.png");
+>>>>>>> 8673721 (Test Images)
+=======
+    background-image: url("/imgs/GSMINIcrop.png");
+>>>>>>> 2b9aaf9 (Test Image)
+    background-size: contain;
+    background-repeat: no-repeat;
+>>>>>>> 1fcdd6c (Fix Image)
+=======
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 50%;
-    height: auto;
+    height: 100%;
 
-    background-image: url("/imgs/GSMINIgigbag.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+=======
+>>>>>>> c203897 (Fix image finally)
+    .gigbag--image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+>>>>>>> 54196e3 (Fix gigbag Image Responsiveness)
   }
 
   .features--content-container {
@@ -227,7 +262,7 @@ html {
     justify-content: center;
 
     width: 50%;
-    height: auto;
+    height: 100%;
 
     font-size: 2rem;
   }
