@@ -227,6 +227,29 @@ html {
     height: 100%;
 
     font-size: 2rem;
+
+    .features--content-title {
+      color: $primary-color-dark;
+      text-transform: uppercase;
+      font-size: 6rem;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      margin-left: 2.7rem;
+
+      .features--content-listitem {
+        @include ff-sourcesans();
+        list-style: inside;
+        list-style-position: outside;
+        padding-bottom: 2rem;
+        font-size: 2.7rem;
+      }
+
+      .features--content-listitem:last-child {
+        padding-bottom: 0;
+      }
+    }
   }
 }
 

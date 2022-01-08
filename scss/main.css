@@ -310,4 +310,28 @@ html {
   height: 100%;
   font-size: 2rem;
 }
+
+.features--section-wrapper .features--content-container .features--content-title {
+  color: #8c1f23;
+  text-transform: uppercase;
+  font-size: 6rem;
+}
+
+.features--section-wrapper .features--content-container ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 2.7rem;
+}
+
+.features--section-wrapper .features--content-container ul .features--content-listitem {
+  font-family: "Source Sans Pro", "sans-serif";
+  list-style: inside;
+  list-style-position: outside;
+  padding-bottom: 2rem;
+  font-size: 2.7rem;
+}
+
+.features--section-wrapper .features--content-container ul .features--content-listitem:last-child {
+  padding-bottom: 0;
+}
 /*# sourceMappingURL=main.css.map */
