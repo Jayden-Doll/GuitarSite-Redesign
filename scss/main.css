@@ -287,49 +287,12 @@ html {
   height: auto;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .features--section-wrapper .image--container-gig .gigbag--image {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-=======
-.features--section-wrapper .image-container-gig {
-=======
-.features--section-wrapper .image--container-gig {
->>>>>>> 54196e3 (Fix gigbag Image Responsiveness)
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
-<<<<<<< HEAD
-  height: auto;
-  background-image: url("/imgs/GSMINIcrop.png");
-  background-size: contain;
-  background-repeat: no-repeat;
->>>>>>> 8673721 (Test Images)
-=======
-  height: 100%;
-}
-
-=======
->>>>>>> c203897 (Fix image finally)
-.features--section-wrapper .image--container-gig .gigbag--image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
->>>>>>> 54196e3 (Fix gigbag Image Responsiveness)
 }
 
 .features--section-wrapper .features--content-container {
