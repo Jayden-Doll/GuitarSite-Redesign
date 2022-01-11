@@ -232,7 +232,18 @@ html {
       color: $primary-color-dark;
       text-transform: uppercase;
       font-size: 6rem;
+      margin-bottom: -2rem;
     }
+
+    .features--content-subtitle {
+      @include ff-raleway();
+      color: $secondary-color;
+      max-width: 35ch;
+      font-size: 2.5rem;
+      font-weight: normal;
+      margin-bottom: 1em;
+    }
+
     ul {
       margin: 0;
       padding: 0;
@@ -243,7 +254,7 @@ html {
         list-style: inside;
         list-style-position: outside;
         padding-bottom: 2rem;
-        font-size: 2.7rem;
+        font-size: 2.01rem;
       }
 
       .features--content-listitem:last-child {
