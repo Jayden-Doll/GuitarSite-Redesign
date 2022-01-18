@@ -8,6 +8,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes fadeInContent {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate {
+  animation: fadeInContent 1s ease forwards;
+}
+
 //START OF HERO SECTION
 .hero--section-wrapper {
   @include ff-raleway();
@@ -17,9 +31,10 @@ html {
 
   width: 100%;
   height: 100vh;
-  padding: 5% 14em;
+  padding: 5% 8%;
 
   .nav--container {
+    opacity: 0;
     display: flex;
     width: 100%;
     height: auto;
@@ -75,6 +90,7 @@ html {
     padding-right: 18%;
 
     .hero--text-container {
+      opacity: 0;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -138,6 +154,7 @@ html {
       }
     }
     .guitar--image {
+      opacity: 0;
       display: block;
 
       width: 148%;
@@ -181,7 +198,7 @@ html {
 
   width: 100%;
   height: 100vh;
-  padding: 4em 14em;
+  padding: 4em 8%;
   padding-right: 7em;
 
   .background--decoration-features {
@@ -207,6 +224,7 @@ html {
   }
 
   .image--container-gig {
+    opacity: 0;
     .gigbag--image {
       display: block;
 
@@ -218,6 +236,7 @@ html {
   }
 
   .features--content-container {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,10 +304,12 @@ html {
 
   width: 100%;
   height: 100vh;
-  padding: 4em 14em;
+  padding: 4em 8%;
 
   .review--content-container {
+    opacity: 0;
     display: flex;
+
     flex-direction: column;
     text-align: center;
 
@@ -297,22 +318,29 @@ html {
 
       text-transform: uppercase;
       font-size: 6rem;
-      .review--content-subtitle {
-        color: $secondary-color;
-        font-size: 2.01rem;
-      }
+    }
+
+    .review--content-subtitle {
+      color: $secondary-color;
+
+      font-size: 2.5rem;
+      font-weight: normal;
     }
   }
 
   .video--container {
     position: relative;
+
     width: 100%;
-    padding-bottom: 50%;
     height: auto;
-    transform: scale(75%);
+    padding-bottom: 50%;
+
+    transform: scale(90%);
 
     iframe {
+      opacity: 0;
       position: absolute;
+
       top: 0;
       left: 0;
       width: 100%;

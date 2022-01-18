@@ -42,10 +42,10 @@
 
     <!-- Hero Section -->
 
-    <section class="hero--section-wrapper">
+    <section id="#section" class="hero--section-wrapper">
       <!--Navigation-->
       <header>
-        <nav class="nav--container">
+        <nav class="content nav--container">
           <ul class="nav--list">
             <li id="logo" class="nav--list-item logo">
               <a class="nav--list-link logo--link" href="/">GS </a>
@@ -70,7 +70,7 @@
       <!--Navigation End-->
 
       <div class="hero--content-container">
-        <div class="hero--text-container">
+        <div class="content hero--text-container">
           <h1 class="hero--content-title">Taylor GS Mini Mahogany</h1>
           <h2 class="hero--content-subtitle">
             Small guitar, <span class="subtitle--decoration">big sound.</span>
@@ -82,7 +82,11 @@
           <a class="btn btn--hero" href="#">order now</a>
         </div>
         <div class="guitar--container">
-          <img class="guitar--image" src="imgs/GSMINI2crop.png" alt="guitar" />
+          <img
+            class="content guitar--image"
+            src="imgs/GSMINI2crop.png"
+            alt="guitar"
+          />
         </div>
       </div>
       <img
@@ -97,17 +101,17 @@
 
     <!--Features Section-->
     <main>
-      <div class="features--section-wrapper" id="Features">
+      <section class="features--section-wrapper" id="Features">
         <div class="background--decoration-features"></div>
         <img
           class="image--dark-triangle"
           src="imgs/dark-red-triangle.svg"
           alt="Dark Red Triangle Shape"
         />
-        <div class="image--container-gig">
+        <div class="content image--container-gig">
           <img class="gigbag--image" src="imgs/gigbag.png" alt="gigbag" />
         </div>
-        <div class="features--content-container">
+        <div class="content features--content-container">
           <h1 class="features--content-title">Features</h1>
           <h2 class="features--content-subtitle">
             Some of the features and accessories of the GS Mini Mahogany
@@ -123,28 +127,33 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </main>
     <!--End of Features Section-->
 
     <!--Review section-->
-    <div class="review--section-wrapper" id="Review">
-      <div class="review--content-container">
-        <h1 class="review--content-title">Review</h1>
-        <h2>Take a look at a review of the Taylor GS Mini Mahogany</h2>
-      </div>
-      <div class="video--container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/a_uakxZCMyw"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+    <main>
+      <section class="review--section-wrapper" id="Review">
+        <div class="content content review--content-container">
+          <h1 class="review--content-title">Review</h1>
+          <h2 class="review--content-subtitle">
+            Take a look at a review of the Taylor GS Mini Mahogany
+          </h2>
+        </div>
+        <div class="video--container">
+          <iframe
+            class="content"
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/a_uakxZCMyw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
     <!--End of review section-->
     <!-- <button class="btn-default">Standard Tuning</button>
     <button class="btn-c">C Chord</button>
@@ -155,6 +164,6 @@
     <button class="btn-f">F Chord</button>
     <div class="container--sound-list"></div> -->
     <!--Main Script-->
-    <!--     <script src="scripts/app.js"></script> -->
+    <script src="scripts/app.js"></script>
   </body>
 </html>

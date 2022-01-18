@@ -1,3 +1,5 @@
+const sections = document.querySelectorAll(".content");
+
 const stringSounds = ["E", "A", "D", "G", "B", "e"];
 const stringSoundsC = ["MutedE", "C3", "E2", "G", "C1", "e"];
 const stringSoundsG = ["G3", "B2", "D", "G", "D3", "g3"];
@@ -14,6 +16,27 @@ const btnD = document.querySelector(".btn-d");
 const btnA = document.querySelector(".btn-a");
 const btnE = document.querySelector(".btn-e");
 const btnF = document.querySelector(".btn-f");
+
+//Check for scroll event
+window.addEventListener("scroll", checkContent);
+
+//Initial check for content
+checkContent();
+
+//Check position of boxes on screen relative to current height
+function checkContent() {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+
+  //Check the boxes
+  sections.forEach((section) => {
+    //Gets the top of the element
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add("animate");
+    }
+  });
+}
 
 //Default notes setup
 const defaultStrings = () => {
