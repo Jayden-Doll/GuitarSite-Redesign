@@ -365,7 +365,7 @@ html {
   height: 50vh;
   padding: 3% 8%;
   padding-bottom: 1%;
-  background-color: #4a4a4a;
+  background-color: #333;
 
   .footer--content-container {
     opacity: 0;
@@ -415,7 +415,7 @@ html {
 
     .footer--copyright {
       margin-top: 6rem;
-      color: rgb(211, 211, 211);
+      color: rgb(140, 140, 140);
       font-size: 1.6rem;
       letter-spacing: 0.08rem;
     }
@@ -432,7 +432,7 @@ html {
   }
 
   i {
-    color: rgb(211, 211, 211);
+    color: rgb(140, 140, 140);
     font-size: 3rem;
     transition: color 0.15s ease-in-out;
 
@@ -446,7 +446,7 @@ html {
     bottom: 0;
     left: 0;
     z-index: 0;
-    background-color: $secondary-color;
+    background-color: rgb(29, 29, 29);
     width: 100%;
     height: 33%;
   }
