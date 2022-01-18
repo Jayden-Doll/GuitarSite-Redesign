@@ -205,18 +205,19 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-right: 6rem;
 }
 
 .hero--section-wrapper .hero--content-container .hero--text-container .hero--content-title {
   margin-top: 2.5rem;
-  padding: 1.5rem 0;
-  font-size: 6rem;
+  padding: 0.75rem 0;
+  font-size: 5rem;
   line-height: 7rem;
 }
 
 .hero--section-wrapper .hero--content-container .hero--text-container .hero--content-subtitle {
   padding-bottom: 1rem;
-  font-size: 3.7rem;
+  font-size: 2.7rem;
   font-weight: 500;
   color: #333;
 }
