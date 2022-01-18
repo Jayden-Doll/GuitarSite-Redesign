@@ -33,156 +33,164 @@ html {
   height: 100vh;
   padding: 5% 8%;
 
-  .nav--container {
-    opacity: 0;
-    display: flex;
+  .content--wrapper {
     width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 
-    .nav--list {
+    .nav--container {
+      opacity: 0;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
 
-      margin: 0;
-      padding-top: 1rem;
+      .nav--list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-      .nav--list-item {
-        font-size: 2rem;
+        margin: 0;
+        padding-top: 1rem;
 
-        .nav--list-link {
-          padding: 0 1rem;
-          margin: 0 1.5rem;
+        .nav--list-item {
+          font-size: 2rem;
+
+          .nav--list-link {
+            padding: 0 1rem;
+            margin: 0 1.5rem;
+
+            color: $secondary-color;
+
+            transition: 65ms ease-in-out;
+
+            &:hover {
+              border-bottom: 3px solid $primary-color-light;
+              color: $primary-color-light;
+            }
+          }
+
+          .logo--link {
+            padding-left: 0;
+            margin-left: 0;
+
+            font-weight: 700;
+
+            &:hover {
+              border: none;
+
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .hero--content-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      width: 100%;
+      height: 85vh;
+      padding-right: 18%;
+
+      .hero--text-container {
+        opacity: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-right: 6rem;
+
+        .hero--content-title {
+          margin-top: 2.5rem;
+          padding: 0.75rem 0;
+
+          font-size: 5rem;
+          line-height: 7rem;
+        }
+
+        .hero--content-subtitle {
+          padding-bottom: 1rem;
+
+          font-size: 2.7rem;
+          font-weight: 500;
 
           color: $secondary-color;
 
-          transition: 65ms ease-in-out;
+          .subtitle--decoration {
+            color: $primary-color;
 
-          &:hover {
-            border-bottom: 3px solid $primary-color-light;
-            color: $primary-color-light;
+            font-weight: 600;
           }
         }
 
-        .logo--link {
-          padding-left: 0;
-          margin-left: 0;
+        .hero--content-description {
+          @include ff-sourcesans();
 
+          padding-top: 0;
+          padding-bottom: 5rem;
+          margin-top: 0;
+
+          font-size: 2.01rem;
+          max-width: 40ch;
+
+          color: $secondary-color;
+        }
+
+        .btn--hero {
+          width: 22rem;
+          padding: 2rem 3rem;
+          border-radius: 0.1em;
+
+          text-align: center;
+          font-size: 2.5rem;
+          text-transform: uppercase;
           font-weight: 700;
 
-          &:hover {
-            border: none;
+          background-color: $primary-color;
+          color: #fff;
 
-            color: $secondary-color;
+          &:hover {
+            background-color: $primary-color-dark;
+          }
+
+          &:active {
+            background-color: $primary-color;
           }
         }
       }
-    }
-  }
+      .guitar--image {
+        opacity: 0;
+        display: block;
 
-  .hero--content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
-    height: 85vh;
-    padding-right: 18%;
-
-    .hero--text-container {
-      opacity: 0;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      padding-right: 6rem;
-
-      .hero--content-title {
-        margin-top: 2.5rem;
-        padding: 0.75rem 0;
-
-        font-size: 5rem;
-        line-height: 7rem;
-      }
-
-      .hero--content-subtitle {
-        padding-bottom: 1rem;
-
-        font-size: 2.7rem;
-        font-weight: 500;
-
-        color: $secondary-color;
-
-        .subtitle--decoration {
-          color: $primary-color;
-
-          font-weight: 600;
-        }
-      }
-
-      .hero--content-description {
-        @include ff-sourcesans();
-
-        padding-top: 0;
-        padding-bottom: 5rem;
-        margin-top: 0;
-
-        font-size: 2.01rem;
-        max-width: 40ch;
-
-        color: $secondary-color;
-      }
-
-      .btn--hero {
-        width: 22rem;
-        padding: 2rem 3rem;
-        border-radius: 0.1em;
-
-        text-align: center;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        font-weight: 700;
-
-        background-color: $primary-color;
-        color: #fff;
-
-        &:hover {
-          background-color: $primary-color-dark;
-        }
-
-        &:active {
-          background-color: $primary-color;
-        }
+        width: 148%;
+        height: auto;
+        padding: 8rem 0;
       }
     }
-    .guitar--image {
-      opacity: 0;
-      display: block;
 
-      width: 148%;
-      height: auto;
-      padding: 8rem 0;
+    .background--decoration {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 1.5%;
+
+      background-color: $primary-color;
     }
-  }
 
-  .background--decoration {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    .image--triangle {
+      position: absolute;
+      bottom: 1.5%;
+      left: 0;
+      z-index: -1;
 
-    width: 100%;
-    height: 1.5%;
-
-    background-color: $primary-color;
-  }
-
-  .image--triangle {
-    position: absolute;
-    bottom: 1.5%;
-    left: 0;
-    z-index: -1;
-
-    width: 100%;
+      width: 100%;
+    }
   }
 }
 //END OF HERO SECTION
