@@ -1,22 +1,10 @@
+/* Content Fade-In Functionality
+--------------------------
+
+*/
+
+//Select all classes with the class of content
 const sections = document.querySelectorAll(".content");
-
-const stringSounds = ["E", "A", "D", "G", "B", "e"];
-const stringSoundsC = ["MutedE", "C3", "E2", "G", "C1", "e"];
-const stringSoundsG = ["G3", "B2", "D", "G", "D3", "g3"];
-const stringSoundsD = ["E", "A", "D", "A2", "D3", "ff2"];
-const stringSoundsA = ["E", "A", "E2", "A2", "CC2", "e"];
-const stringSoundsE = ["E", "B2", "E2", "GG1", "B", "e"];
-const stringSoundsF = ["F1", "C3", "F3", "A2", "C1", "f1"];
-
-const containerEl = document.querySelector(".container--sound-list");
-const btnDefault = document.querySelector(".btn-default");
-const btnC = document.querySelector(".btn-c");
-const btnG = document.querySelector(".btn-g");
-const btnD = document.querySelector(".btn-d");
-const btnA = document.querySelector(".btn-a");
-const btnE = document.querySelector(".btn-e");
-const btnF = document.querySelector(".btn-f");
-
 //Check for scroll event
 window.addEventListener("scroll", checkContent);
 
@@ -37,6 +25,11 @@ function checkContent() {
     }
   });
 }
+
+/* Guitar String Functionality
+------------------------------
+
+*/
 
 //Default notes setup
 const defaultStrings = () => {
