@@ -250,9 +250,9 @@ html {
       color: $primary-color-dark;
 
       text-transform: uppercase;
-      font-size: 6rem;
+      font-size: 4.5rem;
 
-      margin-bottom: -2rem;
+      margin-bottom: -0.75rem;
     }
 
     .features--content-subtitle {
@@ -263,7 +263,7 @@ html {
       max-width: 35ch;
       margin-bottom: 1em;
 
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: normal;
     }
 
@@ -306,45 +306,58 @@ html {
   height: 100vh;
   padding: 4em 8%;
 
-  .review--content-container {
-    opacity: 0;
-    display: flex;
-
-    flex-direction: column;
-    text-align: center;
-
-    .review--content-title {
-      color: $primary-color-dark;
-
-      text-transform: uppercase;
-      font-size: 6rem;
-    }
-
-    .review--content-subtitle {
-      color: $secondary-color;
-
-      font-size: 2.5rem;
-      font-weight: normal;
-    }
-  }
-
-  .video--container {
-    position: relative;
-
+  .content--wrapper {
     width: 100%;
-    height: auto;
-    padding-bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    transform: scale(90%);
-
-    iframe {
+    .review--content-container {
       opacity: 0;
-      position: absolute;
+      display: flex;
 
-      top: 0;
-      left: 0;
+      flex-direction: column;
+      text-align: center;
+
+      .review--content-title {
+        color: $primary-color-dark;
+
+        text-transform: uppercase;
+        font-size: 4.5rem;
+      }
+
+      .review--content-subtitle {
+        color: $secondary-color;
+
+        font-size: 2.2rem;
+        font-weight: normal;
+        margin-top: -1rem;
+      }
+    }
+
+    .video--wrapper {
       width: 100%;
-      height: 100%;
+      max-width: 850px;
+      margin: 3rem auto;
+
+      .video--container {
+        width: 100%;
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+
+        iframe {
+          opacity: 0;
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
     }
   }
 }
@@ -384,12 +397,12 @@ html {
 
       .footer--content-title {
         color: #fff;
-        font-size: 4rem;
+        font-size: 4.5rem;
       }
 
       .footer--content-subtitle {
         color: rgb(232, 232, 232);
-        font-size: 3rem;
+        font-size: 2.2rem;
         @include ff-sourcesans();
         margin-top: -1rem;
       }
