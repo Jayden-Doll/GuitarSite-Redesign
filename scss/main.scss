@@ -520,7 +520,8 @@ html {
 
     .guitar-neck-bg {
       position: absolute;
-      background-image: url("/imgs/guitarneck.jpg");
+      display: block;
+      background-image: url("../imgs/guitarneck.jpg");
       filter: brightness(0.8);
       width: 100%;
       height: 100%;
