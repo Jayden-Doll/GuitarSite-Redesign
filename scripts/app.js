@@ -26,6 +26,27 @@ function checkContent() {
   });
 }
 
+/* Slider Toggle functionality 
+------------------------------
+
+*/
+
+// Select Slider Elements
+const slider = document.querySelector(".slider");
+const sliderBackground = document.querySelector(".slider-background");
+const toggleText = document.querySelector(".toggle-text");
+
+//Event listener for a click on the slider
+sliderBackground.addEventListener("click", () => {
+  //Switch between enabled and disabled slider classes
+  slider.classList.toggle("slider-enabled");
+  slider.classList.toggle("slider-disabled");
+
+  //Switch between enabled and disabled toggle text classes
+  toggleText.classList.toggle("text-enabled");
+  toggleText.classList.toggle("text-disabled");
+});
+
 /* Guitar String Functionality
 ------------------------------
 

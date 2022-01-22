@@ -5,6 +5,8 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -302,6 +304,7 @@ html {
 
 .features--section-wrapper {
   font-family: "Raleway", "sans-serif";
+  background-color: #f4f4f4;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,7 +335,7 @@ html {
   position: absolute;
   top: 1.5%;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: auto;
 }
@@ -402,7 +405,7 @@ html {
 
 .review--section-wrapper {
   font-family: "Raleway", "sans-serif";
-  background-color: #f4f4f4;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,6 +488,264 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.soundtest--section-wrapper {
+  font-family: "Raleway", "sans-serif";
+  background-color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 4em 8%;
+}
+
+.soundtest--section-heading {
+  opacity: 0;
+  margin-bottom: 10rem;
+}
+
+.soundtest--section-title {
+  color: #8c1f23;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+
+.soundtest--section-subtitle {
+  color: #333;
+  font-size: 2.2rem;
+  font-weight: normal;
+  margin-top: -1rem;
+}
+
+.soundtest--slider {
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
+.slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-container .slider-background {
+  border: 2px solid #333;
+  width: 20rem;
+  height: 2.5rem;
+  padding: 0.45rem 0.4rem;
+  border-radius: 0.4rem;
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5), 0 3px 5px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5), 0 3px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container .slider-background .slider {
+  width: 50%;
+  height: 100%;
+  border-radius: 0.2rem;
+  -webkit-transition: background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  border: none;
+}
+
+.slider-disabled {
+  background-color: #6a6a6a;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider-enabled {
+  background-color: #aa1e23;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.toggle-text {
+  font-family: "Raleway";
+  color: #333;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.text-disabled::after {
+  content: " Disabled";
+  font-family: "Source Sans Pro";
+  letter-spacing: 0.03rem;
+  font-weight: bolder;
+  color: #6a6a6a;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.text-enabled::after {
+  font-family: "Source Sans Pro";
+  content: " Enabled";
+  letter-spacing: 0.03rem;
+  font-weight: bolder;
+  color: #aa1e23;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.soundtest--content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  margin-bottom: 4rem;
+}
+
+.guitar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20rem;
+  min-width: 70rem;
+}
+
+.guitar-container .guitar-head {
+  position: relative;
+  z-index: 2;
+  width: 5rem;
+  background-color: #c4c4c4;
+  color: #fff;
+  -webkit-box-shadow: inset -10px 0 30px 5px #6a6a6a;
+          box-shadow: inset -10px 0 30px 5px #6a6a6a;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.guitar-container .guitar-head .string-name-indicator {
+  padding-left: 2rem;
+}
+
+.guitar-container .guitar-neck {
+  position: relative;
+  width: 55rem;
+  height: 100%;
+}
+
+.guitar-container .guitar-neck .guitar-neck-bg {
+  position: absolute;
+  background-image: url("/imgs/guitarneck.jpg");
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.guitar-container .guitar-neck .guitar-frets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.guitar-container .guitar-neck .guitar-frets .fret {
+  width: 0.6rem;
+  height: auto;
+  background-color: #a9a9a9;
+  -webkit-box-shadow: inset 0 0 0.4px 2px #1d1d1d;
+          box-shadow: inset 0 0 0.4px 2px #1d1d1d;
+  z-index: 1;
+}
+
+.guitar-container .guitar-neck .guitar-strings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.guitar-container .guitar-neck .guitar-strings .string {
+  height: 1.3rem;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0 4.5px 3.5px #6a6a6a, 0 0 6px 2px #454545;
+          box-shadow: inset 0 0 4.5px 3.5px #6a6a6a, 0 0 6px 2px #454545;
+}
+
+.guitar-container .guitar-neck .guitar-strings .string:hover {
+  background-color: #d74a4f;
+  -webkit-box-shadow: inset 0 0 4.5px 3.5px #600508, 0 0 6px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 4.5px 3.5px #600508, 0 0 6px 2px rgba(0, 0, 0, 0.5);
+}
+
+.guitar-container .guitar-end {
+  width: 2rem;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: -20px 0 15px 20px #f4f4f4;
+          box-shadow: -20px 0 15px 20px #f4f4f4;
+  z-index: 1;
+}
+
+.chord-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+.chord-selector p {
+  padding-right: 0.7rem;
 }
 
 .footer--section-wrapper {
