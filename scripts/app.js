@@ -62,7 +62,7 @@ const stringSoundsE = ["E", "B2", "E2", "GG1", "B", "e"];
 const stringSoundsF = ["F1", "C3", "F3", "A2", "C1", "f1"];
 
 //Select buttons and container
-const containerEl = document.querySelector(".container--sound-list");
+const container = document.querySelector(".guitar-strings");
 const btnDefault = document.querySelector(".btn-default");
 const btnC = document.querySelector(".btn-c");
 const btnG = document.querySelector(".btn-g");
@@ -76,15 +76,13 @@ const defaultStrings = () => {
   //Loop over each item in the string array, make each sound a div, and append it to the container
   stringSounds.forEach((stringSound) => {
     const div = document.createElement("div");
-    div.classList.add("container--sound-item");
-
-    div.innerText = stringSound;
+    div.classList.add("string");
 
     div.addEventListener("mouseover", () => {
       document.querySelector(`#${stringSound}`).play();
     });
 
-    document.querySelector(".container--sound-list").appendChild(div);
+    document.querySelector(".guitar-strings").appendChild(div);
   });
 };
 
@@ -94,8 +92,8 @@ defaultStrings();
 const ifDefaultButtonPressed = () => {
   btnDefault.addEventListener("click", () => {
     //Delete the first child of the container until there are no children
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     //Switches to the default string setup
@@ -107,8 +105,8 @@ const ifDefaultButtonPressed = () => {
 const playChordC = () => {
   btnC.addEventListener("click", () => {
     //On click, remove every child
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     //Creates template for C chord note as similarly to the default strings function above
@@ -135,8 +133,8 @@ playChordC();
 //G Chord Function
 const playChordG = () => {
   btnG.addEventListener("click", () => {
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     stringSoundsG.forEach((stringSoundG) => {
@@ -161,8 +159,8 @@ playChordG();
 //D Chord Function
 const playChordD = () => {
   btnD.addEventListener("click", () => {
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     stringSoundsD.forEach((stringSoundD) => {
@@ -187,8 +185,8 @@ playChordD();
 //A Chord Function
 const playChordA = () => {
   btnA.addEventListener("click", () => {
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     stringSoundsA.forEach((stringSoundA) => {
@@ -213,8 +211,8 @@ playChordA();
 //E Chord Function
 const playChordE = () => {
   btnE.addEventListener("click", () => {
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     stringSoundsE.forEach((stringSoundE) => {
@@ -239,8 +237,8 @@ playChordE();
 //F Chord Function
 const playChordF = () => {
   btnF.addEventListener("click", () => {
-    while (containerEl.firstChild) {
-      containerEl.removeChild(containerEl.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     stringSoundsF.forEach((stringSoundF) => {
