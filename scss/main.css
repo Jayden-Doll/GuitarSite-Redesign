@@ -506,7 +506,7 @@ html {
 
 .soundtest--section-heading {
   opacity: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .soundtest--section-title {
@@ -736,21 +736,55 @@ html {
 }
 
 .chord-selector {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  color: #333;
   font-size: 2rem;
+  -webkit-transform: translateY(-12.5rem);
+          transform: translateY(-12.5rem);
 }
 
-.chord-selector p {
-  padding-right: 0.7rem;
+.chord-selector .chord-text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.chord-dropdown {
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 10px 1px rgba(130, 130, 130, 0.1);
+          box-shadow: 0 10px 10px 1px rgba(130, 130, 130, 0.1);
+}
+
+.chord-dropdown p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.chord-dropdown p:hover {
+  background-color: #8c1f23;
+  color: #fff;
+}
+
+.chord-dropdown p:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chord-dropdown p:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .footer--section-wrapper {
   position: relative;
+  z-index: -1;
   font-family: "Raleway", "sans-serif";
   display: -webkit-box;
   display: -ms-flexbox;

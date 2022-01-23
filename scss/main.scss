@@ -390,7 +390,7 @@ html {
 
 .soundtest--section-heading {
   opacity: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .soundtest--section-title {
@@ -579,12 +579,41 @@ html {
 }
 
 .chord-selector {
-  display: flex;
-  justify-content: center;
+  color: $secondary-color;
   font-size: 2rem;
+  transform: translateY(-12.5rem);
+
+  .chord-text {
+    user-select: none;
+  }
+}
+
+.chord-dropdown {
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  z-index: 1;
+  box-shadow: 0 10px 10px 1px rgba($color: #828282, $alpha: 0.1);
 
   p {
-    padding-right: 0.7rem;
+    user-select: none;
+    padding: 1rem 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      color: #fff;
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
 }
 
@@ -594,6 +623,7 @@ html {
 
 .footer--section-wrapper {
   position: relative;
+  z-index: -1;
   @include ff-raleway();
 
   display: flex;
