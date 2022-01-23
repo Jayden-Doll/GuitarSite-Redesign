@@ -622,8 +622,6 @@ html {
 //START OF FOOTER SECTION
 
 .footer--section-wrapper {
-  position: relative;
-  z-index: -1;
   @include ff-raleway();
 
   display: flex;

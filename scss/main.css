@@ -783,8 +783,6 @@ html {
 }
 
 .footer--section-wrapper {
-  position: relative;
-  z-index: -1;
   font-family: "Raleway", "sans-serif";
   display: -webkit-box;
   display: -ms-flexbox;
