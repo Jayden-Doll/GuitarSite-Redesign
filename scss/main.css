@@ -797,6 +797,30 @@ html {
   color: #fff;
 }
 
+.greyed {
+  background-color: #b3b3b3;
+}
+
+.guitar-overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: #333;
+  width: 108%;
+  height: 110%;
+  top: -1rem;
+  left: -6rem;
+  opacity: 0;
+}
+
+.chord-select-overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: #333;
+  width: 102%;
+  height: 104%;
+  opacity: 0;
+}
+
 .footer--section-wrapper {
   font-family: "Raleway", "sans-serif";
   display: -webkit-box;

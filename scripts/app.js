@@ -35,6 +35,8 @@ function checkContent() {
 const slider = document.querySelector(".slider");
 const sliderBackground = document.querySelector(".slider-background");
 const toggleText = document.querySelector(".toggle-text");
+const guitarOverlay = document.querySelector(".guitar-overlay");
+const chordSelectOverlay = document.querySelector(".chord-select-overlay");
 
 //Event listener for a click on the slider
 sliderBackground.addEventListener("click", () => {
@@ -45,6 +47,19 @@ sliderBackground.addEventListener("click", () => {
   //Switch between enabled and disabled toggle text classes
   toggleText.classList.toggle("text-enabled");
   toggleText.classList.toggle("text-disabled");
+
+  guitarOverlay.classList.toggle("guitar-overlay");
+  chordSelectOverlay.classList.toggle("chord-select-overlay");
+
+  menuItems.forEach((item) => {
+    if (item.classList.contains("greyed")) {
+      item.classList.toggle("greyed");
+      item.classList.toggle("selected");
+    } else if (item.classList.contains("selected")) {
+      item.classList.toggle("selected");
+      item.classList.toggle("greyed");
+    }
+  });
 });
 
 /* Guitar String Functionality
