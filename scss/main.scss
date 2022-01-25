@@ -386,6 +386,7 @@ html {
   text-align: center;
 
   padding: 4em 8%;
+  padding-bottom: 0;
 }
 
 .soundtest--section-heading {
@@ -450,7 +451,7 @@ html {
 }
 
 .slider-enabled {
-  background-color: #aa1e23;
+  background-color: $primary-color-dark;
   transform: translateX(100%);
 }
 
@@ -475,7 +476,7 @@ html {
   content: " Enabled";
   letter-spacing: 0.03rem;
   font-weight: bolder;
-  color: #aa1e23;
+  color: $primary-color-dark;
   transition: color 0.2s ease-in-out;
 }
 
@@ -483,8 +484,8 @@ html {
   // @include border-test();
   display: flex;
   justify-content: center;
+  height: auto;
   opacity: 0;
-  margin-bottom: 4rem;
 }
 
 .guitar-container {
@@ -589,6 +590,8 @@ html {
 }
 
 .chord-dropdown {
+  display: flex;
+  flex-direction: column;
   background-color: #e3e3e3;
   border-radius: 5px;
   margin-top: 1rem;
@@ -599,6 +602,7 @@ html {
     user-select: none;
     padding: 1rem 0;
     cursor: pointer;
+    transition: 0.2s ease;
 
     &:hover {
       background-color: $primary-color-dark;
@@ -615,6 +619,11 @@ html {
       border-bottom-right-radius: 5px;
     }
   }
+}
+
+.selected {
+  background-color: $primary-color-dark;
+  color: #fff;
 }
 
 //END OF SOUND TEST SECTION
@@ -714,7 +723,7 @@ html {
           transition: color 0.15s ease-in-out;
 
           &:hover {
-            color: #ffffff;
+            color: $primary-color;
           }
         }
       }

@@ -502,6 +502,7 @@ html {
           flex-direction: column;
   text-align: center;
   padding: 4em 8%;
+  padding-bottom: 0;
 }
 
 .soundtest--section-heading {
@@ -578,7 +579,7 @@ html {
 }
 
 .slider-enabled {
-  background-color: #aa1e23;
+  background-color: #8c1f23;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -608,7 +609,7 @@ html {
   content: " Enabled";
   letter-spacing: 0.03rem;
   font-weight: bolder;
-  color: #aa1e23;
+  color: #8c1f23;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
@@ -620,8 +621,8 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: auto;
   opacity: 0;
-  margin-bottom: 4rem;
 }
 
 .guitar-container {
@@ -750,6 +751,13 @@ html {
 }
 
 .chord-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #e3e3e3;
   border-radius: 5px;
   margin-top: 1rem;
@@ -765,6 +773,8 @@ html {
           user-select: none;
   padding: 1rem 0;
   cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .chord-dropdown p:hover {
@@ -780,6 +790,11 @@ html {
 .chord-dropdown p:last-child {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.selected {
+  background-color: #8c1f23;
+  color: #fff;
 }
 
 .footer--section-wrapper {
@@ -919,6 +934,6 @@ html {
 }
 
 .footer--section-wrapper .content--wrapper .footer--section-links .social--icons i:hover {
-  color: #ffffff;
+  color: #aa1e23;
 }
 /*# sourceMappingURL=main.css.map */
