@@ -25,13 +25,14 @@ html {
 //START OF HERO SECTION
 .hero--section-wrapper {
   @include ff-raleway();
+  position: relative;
 
   display: flex;
   flex-direction: column;
 
   width: 100%;
-  height: 100vh;
-  padding: 5% 8%;
+  height: auto;
+  padding: 0 8%;
 
   .content--wrapper {
     width: 100%;
@@ -45,6 +46,7 @@ html {
       display: flex;
       width: 100%;
       height: auto;
+      padding-top: 8rem;
 
       .nav--list {
         display: flex;
@@ -87,14 +89,20 @@ html {
       }
     }
 
+    .nav--container-mobile {
+      display: none;
+    }
+
     .hero--content-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
 
       width: 100%;
-      height: 85vh;
+      height: 100%;
       padding-right: 18%;
+      padding-top: 4rem;
+      padding-bottom: 15%;
 
       .hero--text-container {
         opacity: 0;
@@ -142,7 +150,7 @@ html {
         .btn--hero {
           width: 22rem;
           padding: 2rem 3rem;
-          border-radius: 0.1em;
+          border-radius: 0;
 
           text-align: center;
           font-size: 2.5rem;
@@ -192,7 +200,169 @@ html {
       width: 100%;
     }
   }
+
+  .poop {
+    display: none;
+  }
 }
+
+@media (max-width: 1000px) {
+  .hero--section-wrapper {
+    padding-top: 0;
+
+    .content--wrapper {
+      align-items: center;
+      justify-content: center;
+
+      .nav--container {
+        display: none;
+      }
+
+      header {
+        width: 119%;
+        padding: 0;
+
+        .nav--container-mobile {
+          @include ff-raleway();
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 8%;
+          width: 100%;
+          height: 5rem;
+          background-color: $primary-color;
+
+          .logo-m {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+          }
+
+          .nav--list-m {
+            display: none;
+          }
+        }
+      }
+
+      .hero--content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        padding-bottom: 10rem;
+        padding-top: 0;
+
+        .hero--text-container {
+          opacity: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          padding-right: 0;
+
+          .hero--content-title {
+            padding: 0.75rem 0;
+            padding-top: 0rem;
+
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+          }
+
+          .hero--content-subtitle {
+            padding-bottom: 1rem;
+
+            font-size: 2.2rem;
+          }
+
+          .hero--content-description {
+            @include ff-sourcesans();
+
+            padding-top: 0;
+            padding-bottom: 2rem;
+            margin-top: 0;
+
+            font-size: 1.8rem;
+            max-width: 50ch;
+          }
+
+          .btn--hero {
+            padding: 1rem 1rem;
+            width: 18rem;
+            font-size: 2rem;
+          }
+        }
+
+        .guitar--image {
+          opacity: 0;
+          display: block;
+
+          width: 100%;
+          height: auto;
+          padding: 0;
+          padding-top: 5rem;
+        }
+      }
+
+      .background--decoration {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 1.5%;
+
+        background-color: $primary-color;
+      }
+
+      .image--triangle {
+        position: absolute;
+        bottom: 1.5%;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+      }
+
+      .poop {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 8%;
+
+        a {
+          margin-top: 4rem;
+          color: $secondary-color;
+          font-size: 1.7rem;
+          border-bottom: 2px solid transparent;
+          transition: all 85ms ease;
+
+          &:hover {
+            color: $primary-color-dark;
+            border-bottom: 2px solid $primary-color-dark;
+          }
+
+          &:active {
+            background-color: #fff;
+            outline: none;
+          }
+        }
+
+        span {
+          color: $primary-color;
+          font-size: 1.7rem;
+          margin-top: 4rem;
+          margin-left: -1rem;
+          margin-right: -1rem;
+        }
+      }
+    }
+  }
+}
+
 //END OF HERO SECTION
 
 //FEATURES SECTION
@@ -281,21 +451,102 @@ html {
     ul {
       margin: 0;
       padding: 0;
-      margin-left: 2.7rem;
 
       .features--content-listitem {
         @include ff-sourcesans();
 
-        list-style: inside;
-        list-style-position: outside;
+        list-style: none;
 
-        font-size: 2.01rem;
+        font-size: 2rem;
 
-        padding-bottom: 2rem;
+        padding-bottom: 2.5rem;
+
+        i {
+          padding-right: 1.5rem;
+          color: $primary-color-dark;
+        }
       }
 
       .features--content-listitem:last-child {
         padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .features--section-wrapper {
+    @include ff-raleway();
+
+    background-color: rgb(244, 244, 244);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 4%;
+
+    height: auto;
+    width: 100%;
+
+    .image--container-gig {
+      display: none;
+    }
+
+    .features--content-container {
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: auto;
+
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      .features--content-title {
+        color: $primary-color-dark;
+
+        text-transform: uppercase;
+        font-size: 3rem;
+
+        margin-bottom: -0.75rem;
+      }
+
+      .features--content-subtitle {
+        @include ff-raleway();
+
+        color: $secondary-color;
+
+        max-width: auto;
+        margin-bottom: 1.5em;
+
+        font-size: 2rem;
+        font-weight: normal;
+      }
+
+      ul {
+        text-align: center;
+        width: 100%;
+
+        .features--content-listitem {
+          @include ff-sourcesans();
+
+          list-style: none;
+
+          font-size: 1.8rem;
+
+          padding-bottom: 3.5rem;
+        }
+
+        .features--content-listitem:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }
@@ -372,6 +623,27 @@ html {
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .review--section-wrapper {
+    display: flex;
+    height: auto;
+
+    .content--wrapper {
+      .review--content-container {
+        .review--content-title {
+          font-size: 3rem;
+        }
+
+        .review--content-subtitle {
+          font-size: 2rem;
+          margin-top: -0.5rem;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
 //END OF REVIEW SECTION
 
 //START OF SOUND TEST SECTION
@@ -387,6 +659,12 @@ html {
 
   padding: 4em 8%;
   padding-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .soundtest--section-wrapper {
+    display: none;
+  }
 }
 
 .soundtest--section-heading {
@@ -702,7 +980,7 @@ html {
       .btn--footer {
         width: 23rem;
         padding: 1rem 3rem;
-        border-radius: 0.1em;
+        border-radius: 0;
         margin-top: 3rem;
 
         text-align: center;
@@ -759,4 +1037,41 @@ html {
   }
 }
 
+@media (max-width: 1000px) {
+  .footer--section-wrapper {
+    .content--wrapper {
+      .footer--content-container {
+        .footer--content-title {
+          color: #fff;
+          font-size: 3rem;
+        }
+
+        .footer--content-subtitle {
+          font-size: 2rem;
+          margin-top: -0.5rem;
+        }
+
+        .btn--footer {
+          padding: 1rem 1rem;
+          font-size: 2rem;
+          width: 22rem;
+        }
+      }
+
+      .footer--section-links {
+        .footer--copyright {
+          font-size: 1.4rem;
+        }
+
+        .social--icons {
+          gap: 2.5rem;
+
+          i {
+            font-size: 2.3rem;
+          }
+        }
+      }
+    }
+  }
+}
 //END OF FOOTER SECTION
