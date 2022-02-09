@@ -97,9 +97,9 @@ const btnG = document.querySelector(".btn-G");
 
 const allSounds = {
   default: ["E", "A", "D", "G", "B", "e"],
-  A: ["E", "A", "E2", "A2", "CC2", "e"],
-  C: ["MutedE", "C3", "E2", "G", "C1", "e"],
-  D: ["E", "A", "D", "A2", "D3", "ff2"],
+  A: ["Muted", "A", "E2", "A2", "CC2", "e"],
+  C: ["Muted", "C3", "E2", "G", "C1", "e"],
+  D: ["Muted", "Muted", "D", "A2", "D3", "ff2"],
   E: ["E", "B2", "E2", "GG1", "B", "e"],
   F: ["F1", "C3", "F3", "A2", "C1", "f1"],
   G: ["G3", "B2", "D", "G", "D3", "g3"],
