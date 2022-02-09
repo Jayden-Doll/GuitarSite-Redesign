@@ -101,8 +101,8 @@ const allSounds = {
   C: ["Muted", "C3", "E2", "G", "C1", "e"],
   D: ["Muted", "Muted", "D", "A2", "D3", "ff2"],
   E: ["E", "B2", "E2", "GG1", "B", "e"],
-  F: ["F1", "C3", "F3", "A2", "C1", "f1"],
-  G: ["G3", "B2", "D", "G", "D3", "g3"],
+  F: ["F1", "C3", "F3", "A2", "C1", "highf1"],
+  G: ["G3", "B2", "D", "G", "D3", "highg3"],
 };
 
 const generateStringSounds = (chord) => {
