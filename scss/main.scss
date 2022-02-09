@@ -201,7 +201,7 @@ html {
     }
   }
 
-  .poop {
+  .nav--container-links {
     display: none;
   }
 }
@@ -325,7 +325,7 @@ html {
         width: 100%;
       }
 
-      .poop {
+      .nav--container-links {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -699,7 +699,7 @@ html {
   align-items: center;
 
   .slider-background {
-    border: 2px solid #333;
+    border: 2px solid $secondary-color;
     width: 20rem;
     height: 2.5rem;
     padding: 0.45rem 0.4rem;
@@ -735,7 +735,7 @@ html {
 
 .toggle-text {
   font-family: "Raleway";
-  color: #333;
+  color: $secondary-color;
   font-size: 2rem;
   user-select: none;
 }
@@ -915,7 +915,7 @@ html {
 .guitar-overlay {
   position: absolute;
   z-index: 2;
-  background-color: #333;
+  background-color: $secondary-color;
   width: 115%;
   height: 110%;
   top: -1rem;
@@ -926,13 +926,87 @@ html {
 .chord-select-overlay {
   position: absolute;
   z-index: 2;
-  background-color: #333;
+  background-color: $secondary-color;
   width: 102%;
   height: 104%;
   opacity: 0;
 }
 
 //END OF SOUND TEST SECTION
+
+//START OF HIGHLIGHTS SECTION
+.highlights--section-wrapper {
+  @include ff-raleway();
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: auto 8%;
+  margin: 5rem 0;
+}
+
+.highlights--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: $primary-color-dark;
+
+    text-transform: uppercase;
+    font-size: 4.5rem;
+  }
+  h2 {
+    color: $secondary-color;
+
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-top: -1rem;
+  }
+}
+
+.highlights--content {
+  @include ff-sourcesans();
+  display: flex;
+  margin-top: 3rem;
+
+  .highlights--card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    gap: 3rem;
+    padding: 4rem 12rem;
+    border-top: 5px solid $secondary-color;
+    border-bottom: 5px solid $secondary-color;
+
+    p {
+      font-size: 2rem;
+      color: $secondary-color;
+      border-bottom: 1 solid black;
+
+      i {
+        font-size: 1.75rem;
+        color: $primary-color-dark;
+        padding: 0 2rem;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//END OF HIGHLIGHTS SECTION
 
 //START OF FOOTER SECTION
 
@@ -947,7 +1021,7 @@ html {
   width: 100%;
   height: auto;
   padding: auto 8%;
-  background-color: #333;
+  background-color: $secondary-color;
 
   .content--wrapper {
     width: 100%;
