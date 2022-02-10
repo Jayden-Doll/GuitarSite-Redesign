@@ -272,6 +272,10 @@ html {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: #aa1e23;
   color: #fff;
 }
@@ -568,7 +572,7 @@ html {
 .features--section-wrapper .features--content-container ul .features--content-listitem {
   font-family: "Source Sans Pro", "sans-serif";
   list-style: none;
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding-bottom: 2.5rem;
 }
 
@@ -648,7 +652,7 @@ html {
   .features--section-wrapper .features--content-container ul .features--content-listitem {
     font-family: "Source Sans Pro", "sans-serif";
     list-style: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-bottom: 3.5rem;
   }
   .features--section-wrapper .features--content-container ul .features--content-listitem:last-child {
@@ -906,6 +910,10 @@ html {
   display: flex;
   height: 20rem;
   min-width: 70rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .guitar-container .guitar-head {
@@ -1310,6 +1318,10 @@ html {
   font-weight: 700;
   background-color: #aa1e23;
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .footer--section-wrapper .content--wrapper .footer--content-container .btn--footer:hover {
