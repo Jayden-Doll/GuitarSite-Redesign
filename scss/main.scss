@@ -23,7 +23,14 @@ html {
 }
 
 //START OF HERO SECTION
+#guitar-icon-home {
+  transform: scale(50%);
+}
+
 .hero--section-wrapper {
+  #guitar-icon-home {
+    transform: scale(50%);
+  }
   @include ff-raleway();
   position: relative;
 
@@ -48,21 +55,23 @@ html {
       height: auto;
       padding-top: 8rem;
 
+      #guitar-icon-home {
+        transform: scale(50%);
+      }
+
       .nav--list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
         margin: 0;
+        gap: 4.5rem;
         padding-top: 1rem;
 
         .nav--list-item {
           font-size: 2rem;
 
           .nav--list-link {
-            padding: 0 1rem;
-            margin: 0 1.5rem;
-
             color: $secondary-color;
 
             transition: 65ms ease-in-out;
@@ -150,7 +159,7 @@ html {
         .btn--hero {
           width: 22rem;
           padding: 2rem 3rem;
-          border-radius: 0;
+          border-radius: 4px;
 
           text-align: center;
           font-size: 2.5rem;
@@ -1089,7 +1098,7 @@ html {
       .btn--footer {
         width: 23rem;
         padding: 1rem 3rem;
-        border-radius: 0;
+        border-radius: 4px;
         margin-top: 3rem;
 
         text-align: center;

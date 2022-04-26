@@ -114,6 +114,7 @@ const generateStringSounds = (chord) => {
     div.classList.add("string");
 
     div.addEventListener("mouseover", () => {
+      document.querySelector(`#${stringSound}`).currentTime = 0;
       document.querySelector(`#${stringSound}`).play();
     });
 
