@@ -854,6 +854,10 @@ html {
           box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.5), 0 3px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
+.slider-container .slider-background:hover {
+    cursor: pointer;
+}
+
 .slider-container .slider-background .slider {
   width: 50%;
   height: 100%;
@@ -863,6 +867,10 @@ html {
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   border: none;
+}
+
+.slider-container .slider-background .slider:hover {
+  cursor: pointer
 }
 
 .slider-disabled {
@@ -1026,7 +1034,6 @@ html {
 
 .guitar-container .guitar-neck .guitar-strings .string:hover {
   background-color: #d74a4f;
-  cursor: pointer;
   -webkit-box-shadow: inset 0 0 4.5px 3.5px #600508, 0 0 6px 2px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0 0 4.5px 3.5px #600508, 0 0 6px 2px rgba(0, 0, 0, 0.5);
 }
