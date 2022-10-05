@@ -1,45 +1,62 @@
-# **Guitar Site Redesign**
+# GS Mini Mahogany Mock Product Site
 
-Welcome to my guitar website redesign!
+Welcome to my GS Mini Mahogany mock site!
 
-This project is built from scratch off of [a previous project of the same name](https://github.com/Jayden-Doll/GuitarSite).
+With a great design and a fully-playable guitar, this mock site strives to showcase my favorite guitar in a clear and interactive way.
 
-It is a total and dramatic overhaul of the old site, all with some cool functionality to seal the whole thing together.
-
-You can visit it [here](https://jayden-doll.github.io/GuitarSite-Redesign/).
+<a href="https://taylor-mini-mahogany.netlify.app/" target="_blank">🎸 Check it out here!</a>
 
 ---
 
+![Hero Section Image](./imgs/readme-imgs/CTA.png)
+_Hero Section_
+
 ---
 
-<br>
+# Features
 
-## **The Tools I Used**
+![Feature](https://media.giphy.com/media/veSgHClJyhVExLiTnS/giphy.gif)
 
-<br>
+**-Smooth Page Animations (Site load and scroll)**
 
-![Figma Icon](imgs/figma-icon.svg)
+![Interactive guitar model](./imgs/readme-imgs/guitar.png)
 
-**Figma** (For layout design)
-<br>
-<br>
+**-A fully interactive guitar model with sounds recorded from the Taylor GS Mini guitar (home recorded)**
 
-![html Icon](imgs/html-icon.svg)
+![Enabling Sounds](https://media.giphy.com/media/Gv032MyqjtSsLI7AnV/giphy.gif)
 
-**HTML**
-<br>
-<br>
+_The guitar and its sounds can be enabled or disabled_
 
-![Figma Icon](imgs/sass-icon.svg)
+![Strumming the guitar](https://media.giphy.com/media/VaiU9cZMFRxKJk3mm7/giphy.gif)
 
-**Sass** (CSS Preprocessor)
-<br>
-<br>
+_On mouse hover over the guitar strings, the corresponding sounds will play_
 
-![Figma Icon](imgs/javascript-icon.svg)
+![Changing guitar chords](https://media.giphy.com/media/NzqVskcrHQtYHGI8ta/giphy.gif)
 
-**Javascript**
-<br>
-<br>
+_Changing the chord of the guitar will change what sounds the guitar plays!_
+
+---
+
+## Technologies Used:
+
+![Html Icon](./imgs/readme-imgs/htmllogo.svg)
+
+HTML
+
+![Sass Icon](./imgs/readme-imgs/sassicon.svg)
+
+Sass
+
+![Javascript Icon](./imgs/readme-imgs/javascriptlogo.svg)
+
+Javascript
+
+---
+
+## Design Tools Used:
+
+![Figma Icon](./imgs/readme-imgs/figmalogo.svg)
+
+Figma
 
 ---
